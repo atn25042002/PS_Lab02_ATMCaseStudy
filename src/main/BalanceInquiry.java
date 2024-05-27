@@ -1,3 +1,5 @@
+package src.main;
+
 // BalanceInquiry.java
 //Represents a balance inquiry atm transaction
 

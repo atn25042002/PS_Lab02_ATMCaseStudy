@@ -1,3 +1,5 @@
+package src.main;
+
 // Deposit.java
 // Represents a deposit ATM transaction
 

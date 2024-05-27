@@ -1,3 +1,5 @@
+package src.main;
+
 // Keypad.java
 // Represents ATM's keypad
 

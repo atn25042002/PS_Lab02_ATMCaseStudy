@@ -1,3 +1,5 @@
+package src.main;
+
 //Class Withdrawal represents an ATM withdrawal transaction
 
 public class Withdrawal extends Transaction {

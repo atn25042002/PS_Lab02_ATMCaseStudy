@@ -1,3 +1,5 @@
+package src.main;
+
 // DepositSlot.java
 // Represents the deposit slot of the ATM
 

@@ -1,3 +1,5 @@
+package src.main;
+
 // Transaction.java
 // Abstract super class Transaction represents an ATM transaction
 

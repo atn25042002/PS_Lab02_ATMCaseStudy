@@ -1,3 +1,5 @@
+package src.main;
+
 //Screen.java
 // Represents the screen of the ATM
 

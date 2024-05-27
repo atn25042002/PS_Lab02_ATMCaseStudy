@@ -1,3 +1,5 @@
+package src.main;
+
 // Account.java
 // Represents a bank account
 

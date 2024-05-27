@@ -1,3 +1,5 @@
+package src.main;
+
 	// ATM.java
 	// Represents an automated teller machine
 	
@@ -92,7 +94,7 @@ public class ATM {
 			}
 		}
 		
-		private int displayMainMenu() {
+		public int displayMainMenu() {
 			screen.displayMessageLine("\nMain Menu:");
 			screen.displayMessageLine("1 - View my balance");
 			screen.displayMessageLine("2 - Withdraw cash");

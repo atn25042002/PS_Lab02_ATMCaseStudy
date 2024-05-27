@@ -1,3 +1,5 @@
+package src.main;
+
 //CashDispenser.java
 //Represents Cash Dispenser of the ATM
 
