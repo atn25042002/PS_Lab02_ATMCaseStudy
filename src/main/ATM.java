@@ -103,7 +103,7 @@ public class ATM {
 			return keypad.getInput();
 		}
 		
-		private Transaction createTransaction(int type) {
+		public Transaction createTransaction(int type) {
 			Transaction tmp = null;
 			
 			// determine which type of transaction create

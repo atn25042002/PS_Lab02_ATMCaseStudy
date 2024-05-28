@@ -9,8 +9,6 @@ import org.junit.jupiter.api.Test;
 
 import junit.framework.TestCase;
 
-import java.util.Scanner;
-
 /**
  * The test class ATMTest.
  *
@@ -20,7 +18,6 @@ import java.util.Scanner;
 public class ATMTest extends TestCase
 {
     private ATM theATM;
-    private Scanner input;
     /**
      * Default constructor for test class ATMTest
      */
@@ -37,23 +34,33 @@ public class ATMTest extends TestCase
     public void setUp()
     {
         theATM = new ATM();
-        input = new Scanner(System.in);
     }
 
-    public void testdisplayMainMenu_Opc1() {
+    public void testDisplayMainMenu_Test07() {
         assertEquals(1, theATM.displayMainMenu());
     }
     
-    public void testdisplayMainMenu_Opc2() {
-        assertEquals(1, theATM.displayMainMenu());
+    public void testDisplayMainMenu_Test11() {
+        assertEquals(2, theATM.displayMainMenu());
     }
     
-    public void testdisplayMainMenu_Opc3() {
-        assertEquals(1, theATM.displayMainMenu());
+    public void testDisplayMainMenu_Test26() {
+        assertEquals(3, theATM.displayMainMenu());
     }
     
-    public void testdisplayMainMenu_Opc4() {
-        assertEquals(1, theATM.displayMainMenu());
+    public void testCreateTransaction_Test08() {
+        int opcion= 1;
+        assertTrue(BalanceInquiry.class.isInstance(theATM.createTransaction(opcion)));
+    }
+    
+    public void testCreateTransaction_Test12() {
+        int opcion= 2;
+        assertTrue(Withdrawal.class.isInstance(theATM.createTransaction(opcion)));
+    }
+    
+    public void testCreateTransaction_Test27() {
+        int opcion= 3;
+        assertTrue(Deposit.class.isInstance(theATM.createTransaction(opcion)));
     }
     /**
      * Tears down the test fixture.
