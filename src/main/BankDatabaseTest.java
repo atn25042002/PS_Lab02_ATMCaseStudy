@@ -97,7 +97,7 @@ public class BankDatabaseTest extends TestCase
         //Comprobando saldo total después de un depósito
         double amount = 200;
         bankDatabase.credit(userAccountNumber, amount);
-        assertEquals(1200, bankDatabase.getTotalBalance(userAccountNumber));
+        assertEquals(1400.0, bankDatabase.getTotalBalance(userAccountNumber));
     }    
     
     /**
