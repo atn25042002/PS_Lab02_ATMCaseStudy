@@ -44,7 +44,7 @@ public class ATMTest extends TestCase
         assertEquals(2, theATM.displayMainMenu());
     }
     
-    public void testDisplayMainMenu_Test26() {
+    public void testDisplayMainMenu_Test29() {
         assertEquals(3, theATM.displayMainMenu());
     }
     
@@ -58,7 +58,7 @@ public class ATMTest extends TestCase
         assertTrue(Withdrawal.class.isInstance(theATM.createTransaction(opcion)));
     }
     
-    public void testCreateTransaction_Test27() {
+    public void testCreateTransaction_Test30() {
         int opcion= 3;
         assertTrue(Deposit.class.isInstance(theATM.createTransaction(opcion)));
     }
