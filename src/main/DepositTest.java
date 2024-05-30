@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
  */
 public class DepositTest
 {
-    private Deposit deposit;
+      private Deposit deposit;
     private Keypad keypad;
     private Screen screen;
     private BankDatabase bankDatabase;
