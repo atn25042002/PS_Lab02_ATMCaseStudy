@@ -48,6 +48,26 @@ public class AccountTest extends TestCase
         assertEquals(false, account.validatePIN(pin));
     }
     
+    public void testDepit_Test27(){
+        //Comprobando saldo disponible en la cuenta después de un retiro
+        double amount = 200;
+        account.depit(amount);
+        assertEquals(800.0, account.getAvailableBalance());
+    }
+    
+    public void testDepit_Test28(){
+        //Comprobando saldo total en la cuenta después de un retiro
+        double amount = 200;
+        account.depit(amount);
+        assertEquals(1000.0, account.getTotalBalance());
+    }
+    
+    public void testCredit_Test37(){
+        //Comprobando saldo total en la cuenta después de un depósito
+        double amount = 200;
+        account.credit(amount);
+        assertEquals(1400.0, account.getTotalBalance());
+    }
     /**
      * Tears down the test fixture.
      *
