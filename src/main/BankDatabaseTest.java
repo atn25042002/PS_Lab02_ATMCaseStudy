@@ -65,19 +65,19 @@ public class BankDatabaseTest extends TestCase
     }
     
     public void testGetAvailableBalance_Test09(){
-        //Comprobando la correcta obtención del saldo disponible de la cuenta
+        //Comprobando la correcta obtenciï¿½n del saldo disponible de la cuenta
         int accountNumber= 12345;
         assertEquals(1000.0, bankDatabase.getAvailableBalance(accountNumber));
     }
     
     public void testGetTotalBalance_Test10(){
-        //Comprobando la correcta obtención del saldo total de la cuenta
+        //Comprobando la correcta obtenciï¿½n del saldo total de la cuenta
         int accountNumber= 12345;
         assertEquals(1200.0, bankDatabase.getTotalBalance(accountNumber));
     }
     
     public void testDebit_Test25(){
-        //Comprobando saldo disponible después de un retiro
+        //Comprobando saldo disponible despuï¿½s de un retiro
         int userAccountNumber= 12345;
         double amount = 200;
         bankDatabase.debit(userAccountNumber, amount);
@@ -85,7 +85,7 @@ public class BankDatabaseTest extends TestCase
     }
     
     public void testDebit_Test26(){
-        //Comprobando saldo total después de un retiro
+        //Comprobando saldo total despues de un retiro
         int userAccountNumber= 12345;
         double amount = 200;
         bankDatabase.debit(userAccountNumber, amount);
@@ -94,7 +94,7 @@ public class BankDatabaseTest extends TestCase
     
     public void testCredit_Test36(){
         int userAccountNumber= 12345;
-        //Comprobando saldo total después de un depósito
+        //Comprobando saldo total despuï¿½s de un depï¿½sito
         double amount = 200;
         bankDatabase.credit(userAccountNumber, amount);
         assertEquals(1400.0, bankDatabase.getTotalBalance(userAccountNumber));
