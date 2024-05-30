@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 /**
  * The test class WithdrawalTest.
@@ -20,6 +22,8 @@ public class WithdrawalTest
     private Screen screen;
     private BankDatabase bankDatabase;
     private CashDispenser cashdispenser;
+    //para verficar la salida en el metodo void
+    
 
     /**
      * Default constructor for test class WithdrawalTest
@@ -41,8 +45,7 @@ public class WithdrawalTest
         bankDatabase = new BankDatabase();
         cashdispenser = new CashDispenser();
         withdrawal = new Withdrawal(12345,screen, bankDatabase,keypad,cashdispenser );
-         
-        
+               
         
     }
     
@@ -76,6 +79,68 @@ public class WithdrawalTest
         //Se ingresa 6, devuelve un entero 20
         assertEquals(6, withdrawal.displayMenuOfAmounts());
     }
+    
+    @Test
+    public void testExecute_Test19() {
+        // Get the output from the execute method
+        //the amount es 10000
+        
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out; 
+        System.setOut(new PrintStream(outContent));
+        
+        bankDatabase.credit(12345, 1000); 
+        
+        withdrawal.execute();
+        String output = outContent.toString().trim();
+        System.out.println("Esto captura: " +output);
+        
+
+        // Assert that the output matches the expected output
+        assertTrue(output.contains("Your cash has been" + " dispensed. Please take your cash now."));
+        //assertEquals("\nYour cash has been" + " dispensed. Please take your cash now.", output);
+    }
+     @Test
+    public void testExecute_Test20() {
+        
+        bankDatabase = new BankDatabase();
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out; 
+        System.setOut(new PrintStream(outContent));
+         
+        
+        withdrawal.execute();
+        String output = outContent.toString().trim();
+        System.out.println("Esto captura: " +output);
+        
+
+        // Assert that the output matches the expected output
+        assertTrue(output.contains("Your cash has been" + " dispensed. Please take your cash now."));
+        //assertTrue(output.contains("Insufficient funds in your account." + "Please choose a smaller amount."));
+        //assertEquals("\nYour cash has been" + " dispensed. Please take your cash now.", output);
+    }
+     @Test
+    public void testExecute_Test21() {
+        // Get the output from the execute method
+        //the amount es 10000
+        
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out; 
+        System.setOut(new PrintStream(outContent));
+        
+        bankDatabase.credit(12345, 100);
+        
+        withdrawal.execute();
+        String output = outContent.toString().trim();
+        System.out.println("Esto captura: " +output);
+        
+
+        // Assert that the output matches the expected output
+        assertTrue(output.contains("Your cash has been" + " dispensed. Please take your cash now."));
+        //assertEquals("\nYour cash has been" + " dispensed. Please take your cash now.", output);
+    }
+
+
 
     /**
      * Tears down the test fixture.
@@ -86,4 +151,4 @@ public class WithdrawalTest
     public void tearDown()
     {
     }
-}
+}   
