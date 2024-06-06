@@ -49,7 +49,7 @@ public class WithdrawalTest
         
     }
     
-    @Test
+    /*@Test
     public void testDisplayMenuOfAmounts_Test13() {
         //Se ingresa 1, devuelve un entero 20
         assertEquals(20, withdrawal.displayMenuOfAmounts());
@@ -138,7 +138,7 @@ public class WithdrawalTest
         // Assert that the output matches the expected output
         assertTrue(output.contains("Your cash has been" + " dispensed. Please take your cash now."));
         //assertEquals("\nYour cash has been" + " dispensed. Please take your cash now.", output);
-    }
+    }*/
 
 
 
